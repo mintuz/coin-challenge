@@ -1,0 +1,22 @@
+/**
+ * 
+ * FILE: Main CSS
+ * 
+ * AUTHOR: Adam Bulmer
+ * DATE: 2014
+ * VERSION 1.0
+ * 
+ */
+
+/*------------------------------------*\
+	$SETUP
+\*------------------------------------*/
+
+@import "config";
+@import "site-vars";
+
+@import "compass";
+@import "base/base";
+@import "site/site";
+
+// Nothing should be written in here.

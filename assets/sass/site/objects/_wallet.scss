@@ -1,0 +1,102 @@
+%flex-container {
+	
+	@include flexbox((
+    display: box,
+    box-orient: vertical
+  ), $version: 1);
+  
+  @include flexbox((
+    display: flexbox,
+    flex-direction: row
+  ), $version: 2);
+  
+  @include flexbox((
+    display: flex,
+    flex-direction: row
+  ));
+
+}
+
+html,
+body {
+	height: 100%;
+}
+
+.wallet-container {
+	
+	@extend %flex-container;
+	@include justify-content(center);
+	@include align-items(center);
+
+	@include border-box();
+	padding-top: 		$base-spacing-unit;
+	padding-bottom: $base-spacing-unit;
+}
+
+.wallet {
+	
+	@extend %flex-container;
+	@include flex-basis(90%);
+	@include justify-content(center);
+	@include align-items(center);
+	@include flex-direction(column);
+
+	height: 100%;
+
+	@include mq($from:macro-small) {
+		@include flex-basis(70%);	
+	}
+
+}
+
+.wallet__input {
+	
+	@include adjust-font-size-to(16px);
+	@include border-box();
+	width: 100%;
+	border: none;
+	padding: 18px;
+
+	@include mq($from:macro-small) {
+		@include adjust-font-size-to(20px);
+		padding: $base-spacing-unit;
+	}
+
+	&:focus {
+		outline: 3px solid rgb(0,0,0);
+	}
+
+}
+
+.wallet__pouch {
+
+	@extend %cf;
+	@include adjust-font-size-to(20px);
+	color: rgb(255,255,255);
+	padding-top: $base-spacing-unit;
+
+	@include mq($from:macro-small) {
+		@include adjust-font-size-to(24px);
+	}
+
+}
+
+.wallet__coin {
+
+	float: left;
+	margin-right: 	$half-spacing-unit;
+	margin-bottom: 	$half-spacing-unit;
+	background-color: tint( $bc-pink, 20%);
+	border-radius: 	500px;
+	width: 					35px;
+	line-height: 		35px;
+	padding: $half-spacing-unit;
+	text-align: center;
+
+	@include mq($from:macro-small) {
+		padding: $base-spacing-unit;
+		width: 					45px;
+		line-height: 		45px;
+	}
+
+}

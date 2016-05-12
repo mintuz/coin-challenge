@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+
+/**
+ * Mixins
+ */
+@import "mixins/mq";
+@import "mixins/border-box";
+
+/**
+ * Reset
+ */
+@import "reset/normalize";
+@import "reset/normalize-legacy";
+@import "reset/reset";
+ 
+/**
+ * Clearfix
+ */
+@import "generic/clearfix";
+ 
+/**
+ * Base styles
+ */
+@import "generic/main";

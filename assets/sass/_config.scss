@@ -1,0 +1,48 @@
+/*------------------------------------*\
+	$RESPONSIVENESS
+\*------------------------------------*/
+
+$mq-responsive: true !default;
+
+$mq-breakpoints: (
+
+		// Major Layout Alterations
+		macro-smallest: 320px,
+    macro-small: 480px,
+    macro-medium: 768px,
+    macro-large: 992px,
+    macro-largest: 1248px,
+		
+		// Micro adjustments
+		// Used for those instances 
+		// where something doesn't quite work.
+		// 
+		// eg. micro-macro-breakpoint--micro-name
+		// eg. micro-micro-name
+		//
+		micro-full-img: 400px,
+		micro-small: 500px,
+		micro-medium--adjust-nav: 800px,
+		micro-large: 1000px,
+		micro-largest: 1148px
+
+) !default;
+
+$mq-static-breakpoint: macro-large !default;
+
+/*------------------------------------*\
+	$BASE
+\*------------------------------------*/
+
+/**
+ * Base type
+ */
+$base-font-size: 		16px !default;
+$base-line-height: 	24px !default;
+$base-face: sans-serif !default;
+ 
+/**
+ * Base spacing units
+ */
+$base-spacing-unit: 24px;
+$half-spacing-unit: $base-spacing-unit / 2;
